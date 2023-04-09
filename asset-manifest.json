@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/social_midea.github.io/static/css/main.ed411cbf.css",
+    "main.js": "/social_midea.github.io/static/js/main.eddaa28d.js",
+    "static/js/787.6f726199.chunk.js": "/social_midea.github.io/static/js/787.6f726199.chunk.js",
+    "index.html": "/social_midea.github.io/index.html",
+    "main.ed411cbf.css.map": "/social_midea.github.io/static/css/main.ed411cbf.css.map",
+    "main.eddaa28d.js.map": "/social_midea.github.io/static/js/main.eddaa28d.js.map",
+    "787.6f726199.chunk.js.map": "/social_midea.github.io/static/js/787.6f726199.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed411cbf.css",
+    "static/js/main.eddaa28d.js"
+  ]
+}
