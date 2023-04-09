@@ -1,0 +1,77 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #424242;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.registration,
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  text-align: center;
+}
+
+.registration h1,
+.login h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.registration label,
+.login label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.registration input[type="text"],
+.login input[type="text"],
+.registration input[type="password"],
+.login input[type="password"] {
+  width: 60%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.registration button,
+.login button {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.registration button:hover,
+.login button:hover {
+  background-color: #005daa;
+}
+
+.login {
+  background-color: #fff;
+}

@@ -1,0 +1,136 @@
+.feed {
+ 
+  margin: 0 auto;
+  padding: 20px;
+  width: 80vh;
+  height: 80vh;
+  
+}
+  
+.feed__inputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+  
+.feed__inputContainer input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: none;
+  margin-right: 10px;
+  background-color: #fdfdfd;
+}
+
+.feed__inputContainer button {
+  padding: 10px 20px;
+  background-color: #1877f2;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.feed__inputContainer button:hover {
+  background-color: #0d62b5;
+}
+
+.feed__posts {
+  height: 95%;
+  width: 145%;
+  overflow-y: auto;
+}
+
+.feed__post {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
+  padding: 20px;
+  max-width: 70%; /* Change this value to make the box wider */
+}
+
+.feed__post h3 {
+  margin-top: 0;
+}
+
+.feed__post p {
+  margin-bottom: 10px;
+}
+
+.feed__post-reactions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feed__post-reactions span {
+  font-size: 14px;
+  color: #606770;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.feed__post-reactions span:hover {
+  color: #1877f2;
+}
+
+.feed__comments {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.feed__comments h4 {
+  margin-top: 0;
+}
+
+.feed__comment {
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.feed__comment h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.feed__comment p {
+  margin: 0;
+}
+
+.feed__commentInputContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  
+}
+
+.feed__commentInputContainer input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 999px;
+  border: none;
+  margin-right: 10px;
+  color: #000000;
+  background-color: #ededed
+}
+
+.feed__commentInputContainer button {
+  padding: 10px 20px;
+  background-color: #1877f2;
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.feed__commentInputContainer button:hover {
+  background-color: #0d62b5;
+}

@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  mysql2:
+    image: mysql:8.0
+    container_name: dbchat
+    volumes:
+      - ./:/db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: chat
+
+      MYSQL_PASSWORD: root123
+      
+    healthcheck:
+      test: ["CMD", "mysqlroot", "ping", "-h", "127.0.0.1", "root", "-p root123"]
+      timeout: 20s
+      retries: 10
+
+  node1:
+    build: .
+    container_name: nodejschat_backend
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/app
+    depends_on:
+      mysql2:
+        condition: service_healthy
+    stdin_open: true
+    tty: true
+
+  frontend:
+    build: .
+    container_name: nodejschat_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    stdin_open: true
+    command: npm start
