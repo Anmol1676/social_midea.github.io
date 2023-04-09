@@ -17,12 +17,15 @@ const io = new Server(server, {
   },
 });
 
-var dp = mysql.createConnection({
-    host: 'dbchat',
+var dp = mysql.createPool({
+    host: 'localhost',
     port: 3306,
     user: 'root',
     password: 'root123',
-    database: 'chat'
+    database: 'chat',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
 
@@ -115,7 +118,16 @@ createAdminUser();
 createChannelsTable();
 createPostsTable();
 createCommentsTable();
+// Define a route for your API
+app.get('/api/data', (req, res) => {
+  // Query the database
+  dp.query('SELECT * FROM your_table', (err, results, fields) => {
+    if (err) throw err;
 
+    // Return the results as JSON
+    res.json(results);
+  });
+});
 app.post('/register', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
